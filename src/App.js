@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './components/Header.js'
 import NavigationBar from './components/NavigationBar.js'
+import SplashPage from './components/SplashPage.js'
+
 import logo from './logo.svg';
 import './App.css';
 
