@@ -31,7 +31,7 @@ const Background = styled.div`
 
 const About = styled.div`
   margin-left: 25px;
-  width: 50%;
+  width: 75%;
   height: 100%;
   text-align: left;
   padding-bottom: 25px;
