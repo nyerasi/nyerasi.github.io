@@ -31,14 +31,15 @@ const Background = styled.div`
 
 const About = styled.div`
   margin-left: 25px;
-  width: 75%;
+  width: 50%;
   height: 100%;
   text-align: left;
   padding-bottom: 25px;
 `;
 
 const SocialIcons = styled.div`
-  flex-direction: row;
+  display: flex;
+  justify-content: center;
   width: 100%;
   text-align: center;
   padding-top: 25px;
@@ -47,7 +48,7 @@ const SocialIcons = styled.div`
 const Icon = styled.a`
   color: white;
   font-size: 2.5em;
-  padding-right: 0.75em;
+  padding-right: 25px;
 
   :hover {
 		color: #3EA2FF;
@@ -69,24 +70,24 @@ const Emoji = props => (
 
 export default class SplashPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { width: 0, height: 0};
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { width: 0, height: 0};
+  //   this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  // }
+  //
+  // componentDidMount() {
+  //   this.updateWindowDimensions();
+  //   window.addEventListener('resize', this.updateWindowDimensions);
+  // }
+  //
+  // componentWillUnmount() {
+  //   window.removeEventListener('resize', this.updateWindowDimensions);
+  // }
+  //
+  // updateWindowDimensions() {
+  //   this.setState({ width: window.innerWidth, height: window.innerHeight });
+  // }
   render() {
     const nameStyle = {
       color: '#FFD66C',
@@ -122,6 +123,7 @@ export default class SplashPage extends React.Component {
               <span><Icon href="https://www.github.com/nyerasi"><i class="fab fa-github"></i></Icon></span>
               <span><Icon href="https://www.linkedin.com/in/nyerasi"><i class="fab fa-linkedin-in"></i></Icon></span>
               <span><Icon href="https://medium.com/@nikhil.yerasi"><i class="fab fa-medium-m"></i></Icon></span>
+              <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="far fa-file"></i></Icon></span>
           </SocialIcons>
         </About>
       </Background>
