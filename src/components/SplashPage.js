@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import ProjectCard from './ProjectCard.js'
 
 const Title = styled.h1`
   font-family: 'Roboto', sans-serif;
@@ -16,7 +17,7 @@ const Subtitle = styled.h2`
 `;
 
 const Body = styled.p`
-  font-family: 'Roboto', light;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.25em;
   color: white;
@@ -56,6 +57,24 @@ const Icon = styled.a`
     transition: 0.3s ease-out;
 	}
 `
+
+const CardContainer = styled.span`
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+`;
+
+const CardColumn = styled.span`
+  flex-direction: column;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+`;
+
 
 const Emoji = props => (
     <span
@@ -126,6 +145,12 @@ export default class SplashPage extends React.Component {
               <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="far fa-file"></i></Icon></span>
           </SocialIcons>
         </About>
+        <CardContainer>
+          <CardColumn>
+            <ProjectCard/>
+            <ProjectCard/>
+          </CardColumn>
+        </CardContainer>
       </Background>
     );
   }
