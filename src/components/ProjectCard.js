@@ -74,13 +74,15 @@ const CardTitle = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `
 
 const CardHeader = styled.h3`
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1em;
 `
 
 const CardSubtitle = styled.h4`
@@ -101,8 +103,8 @@ const SocialIcons = styled.div`
   display: flex;
   justify-content: right;
   width: 100%;
-  text-align: center;
-  padding: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
 `
 
 const Icon = styled.a`

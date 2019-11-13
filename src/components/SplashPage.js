@@ -32,7 +32,7 @@ const Background = styled.div`
   width: 100%;
   background-image: linear-gradient(#090B2D, #240035);
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
   display: flex;
   }
 `;
