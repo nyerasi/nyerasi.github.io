@@ -90,6 +90,8 @@ const CardSubtitle = styled.h4`
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.75em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `
 
 const CardDescription = styled.span`

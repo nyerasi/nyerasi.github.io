@@ -8,7 +8,7 @@ const Title = styled.h1`
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
 `;
 

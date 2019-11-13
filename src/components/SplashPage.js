@@ -9,7 +9,7 @@ import { device } from './device.js';
 const Title = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 3.5em;
+  font-size: 3em;
   color: white;
 `;
 
@@ -23,7 +23,7 @@ const Subtitle = styled.h2`
 const Body = styled.p`
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 1.25em;
+  font-size: 1em;
   color: white;
 `;
 
