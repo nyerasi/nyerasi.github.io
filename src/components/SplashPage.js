@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import ProjectCard from './ProjectCard.js';
+import Socials from './Socials.js';
 import Projects from './Projects.js';
+import NavigationMenu from './NavigationMenu.js';
+import { device } from './device.js';
 
 const Title = styled.h1`
   font-family: 'Roboto', sans-serif;
@@ -25,54 +28,37 @@ const Body = styled.p`
 `;
 
 const Background = styled.div`
-  display: flex;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(#090B2D, #240035);
+
+  @media ${device.laptop} {
+  display: flex;
+  }
 `;
 
 const About = styled.div`
+  padding-top: 20px;
   margin-left: 20px;
-  width: 60%;
+  width: 75%;
   height: 100%;
   text-align: left;
   padding-bottom: 20px;
+
+  @media ${device.laptop} {
+    width: 60%;
+  }
 `;
-
-const SocialIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-  padding-top: 25px;
-`
-
-const Icon = styled.a`
-  color: white;
-  font-size: 2.5em;
-  padding-right: 25px;
-
-  :hover {
-		color: #3EA2FF;
-		cursor: pointer;
-    transition: 0.3s ease-out;
-	}
-`
 
 const CardContainer = styled.span`
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-bottom: 25px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
-`;
+  width: 100%;
+  text-align: center;
 
-const CardColumn = styled.span`
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
-  height: 100%;
+  @media ${device.laptop} {
+    width: 60%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
 
 
@@ -107,6 +93,7 @@ export default class SplashPage extends React.Component {
   // updateWindowDimensions() {
   //   this.setState({ width: window.innerWidth, height: window.innerHeight });
   // }
+
   render() {
     const nameStyle = {
       color: '#FFD66C',
@@ -121,6 +108,13 @@ export default class SplashPage extends React.Component {
     const developStyle = {
       color: '#3EA2FF',
       fontWeight: 500
+    };
+
+    const socialLinks = {
+      'github':'https://www.github.com/nyerasi',
+      'linkedin':'https://www.linkedin.com/in/nyerasi',
+      'medium':'https://medium.com/@nikhil.yerasi',
+      'file':'https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing'
     };
 
     return (
@@ -138,13 +132,16 @@ export default class SplashPage extends React.Component {
           <Body>
           You'll soon find some of my recent projects and photos right here.
           </Body>
-          <SocialIcons>
-              <span><Icon href="https://www.github.com/nyerasi"><i class="fab fa-github"></i></Icon></span>
-              <span><Icon href="https://www.linkedin.com/in/nyerasi"><i class="fab fa-linkedin-in"></i></Icon></span>
-              <span><Icon href="https://medium.com/@nikhil.yerasi"><i class="fab fa-medium-m"></i></Icon></span>
-              <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="far fa-file"></i></Icon></span>
-          </SocialIcons>
+          <Socials
+            fontSize = '2.5em'
+            fontColor = {'white'}
+            entries={socialLinks}
+          />
         </About>
+        <CardContainer>
+          <NavigationMenu/>
+          <Projects/>
+        </CardContainer>
       </Background>
     );
   }

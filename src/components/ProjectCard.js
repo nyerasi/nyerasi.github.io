@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import Image from '../components/Image.js'
+import Socials from './Socials.js'
 import styled, { css } from 'styled-components';
 
 // Flipping card
 const Card = styled.article`
   position: relative;
-  width: 100%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 20px;
-  min-height: 200px;
+  /* min-height: ${props => props.minHeight != '' ? props.minHeight : '200px'}; */
+  height: ${props => props.minHeight != '' ? props.minHeight : '200px'};
   cursor: pointer;
   perspective: 1000px;
   transition: all .25s ease-in-out;
@@ -19,25 +22,26 @@ const Card = styled.article`
 
   &.flipped {
     & > div:first-of-type { // frontside of the card
-      transform: perspective(1000px) rotateY(-180deg);
+      transform: perspective(1000px) rotateX(180deg);
     }
 
     & > div:last-of-type { // backside of the card
-      transform: perspective(1000px) rotateY(0deg);
+      transform: perspective(1000px) rotateX(0deg);
     }
   }
 `
 
 // Card sides
 const CardSide = css`
+  width: 100%;
+  /* min-height: ${props => props.minHeight != '' ? props.minHeight : '300px'}; */
+  height: ${props => props.minHeight != '' ? props.minHeight : '300px'};
   border: 2px solid white;
   border-radius: 5px;
   position: absolute;
-  bottom: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   backface-visibility: hidden;
   transition: all .25s ease-in-out;
 `
@@ -54,7 +58,7 @@ const CardFront = styled.div`
 const CardBack = styled.div`
   ${CardSide};
   background-color: white;
-  transform: rotateY(-180deg);
+  transform: rotateX(180deg);
 `
 
 // Card content
@@ -66,9 +70,24 @@ const CardNumber = styled.span`
 `
 
 const CardTitle = styled.h2`
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.5em;
+`
+
+const CardHeader = styled.h3`
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+`
+
+const CardSubtitle = styled.h4`
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.75em;
 `
 
 const CardDescription = styled.span`
@@ -98,25 +117,46 @@ const Icon = styled.a`
 	}
 `
 
+const Image = styled.img`
+  bottom: 0;
+  max-width: 100%;
+  max-height: ${props => props.height != '' ? props.height : '250px'};
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+`
+/*
+card props:
+card front: title, subtitle
+card back: description, photos, github link, web link (if applicable),
+*/
 export default class ProjectCard extends React.Component {
   flipCard(event) {
     event.currentTarget.classList.toggle('flipped')
   }
 
   render() {
+    const nameStyle = {
+      color: '#FFD66C',
+      fontWeight: 500,
+      fontSize: '1.25em'
+    };
     return (
-      <Card onClick={this.flipCard.bind(this)}>
-        <CardFront>
-          <CardTitle>Appstraction</CardTitle>
-          <CardDescription>A progressive web application for the Berkeley Art Museum and Pacific Film Archive featuring exclusive curator commmentary.</CardDescription>
-          <SocialIcons>
-              <span><Icon href="https://www.github.com/nyerasi"><i class="fab fa-github"></i></Icon></span>
-              <span><Icon href="https://medium.com/@nikhil.yerasi"><i class="fab fa-medium-m"></i></Icon></span>
-              <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="fas fa-link"></i></Icon></span>
-          </SocialIcons>
+      <Card onClick={this.flipCard.bind(this)} minHeight={this.props.minHeight}>
+        <CardFront minHeight={this.props.minHeight}>
+          <CardTitle>{this.props.title}</CardTitle>
+          <Image src={this.props.image} height={this.props.imageHeight}/>
         </CardFront>
-        <CardBack>
-          <CardDescription>A progressive web application for the Berkeley Art Museum and Pacific Film Archive featuring exclusive curator commmentary.</CardDescription>
+        <CardBack minHeight={this.props.minHeight}>
+        <CardHeader>{this.props.header}</CardHeader>
+        <CardDescription>{this.props.description}</CardDescription>
+        <CardSubtitle>{this.props.subtitle}</CardSubtitle>
+        <Socials
+          fontSize = '1.5em'
+          fontColor = {'black'}
+          entries={this.props.links}
+        />
         </CardBack>
       </Card>
     );
