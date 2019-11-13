@@ -33,7 +33,7 @@ const Background = styled.div`
 
 const About = styled.div`
   margin-left: 20px;
-  width: 50%;
+  width: 60%;
   height: 100%;
   text-align: left;
   padding-bottom: 20px;
@@ -133,7 +133,7 @@ export default class SplashPage extends React.Component {
             I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things <Emoji symbol=" 🤙🏾"/>
           </Subtitle>
           <Body>
-          I’m a senior at UC Berkeley, where I study Data Science and teach iOS Development. I enjoy building products that enable people to live healthier, happier lives through technology.
+          I’m a senior at UC Berkeley, where I study Data Science and teach iOS Development. I'm currently seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
           </Body>
           <Body>
           You'll soon find some of my recent projects and photos right here.
@@ -145,9 +145,6 @@ export default class SplashPage extends React.Component {
               <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="far fa-file"></i></Icon></span>
           </SocialIcons>
         </About>
-        <CardContainer>
-          <Projects/>
-        </CardContainer>
       </Background>
     );
   }
