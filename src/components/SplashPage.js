@@ -26,8 +26,8 @@ const Body = styled.p`
 
 const Background = styled.div`
   display: flex;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-image: linear-gradient(#090B2D, #240035);
 `;
 
