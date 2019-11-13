@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import ProjectCard from './ProjectCard.js'
+import ProjectCard from './ProjectCard.js';
+import Projects from './Projects.js';
 
 const Title = styled.h1`
   font-family: 'Roboto', sans-serif;
@@ -31,11 +32,11 @@ const Background = styled.div`
 `;
 
 const About = styled.div`
-  margin-left: 25px;
+  margin-left: 20px;
   width: 50%;
   height: 100%;
   text-align: left;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 `;
 
 const SocialIcons = styled.div`
@@ -61,6 +62,7 @@ const Icon = styled.a`
 const CardContainer = styled.span`
   padding-right: 25px;
   padding-left: 25px;
+  padding-bottom: 25px;
   margin-right: auto;
   margin-left: auto;
   width: 50%;
@@ -68,8 +70,6 @@ const CardContainer = styled.span`
 
 const CardColumn = styled.span`
   flex-direction: column;
-  padding-top: 10%;
-  padding-bottom: 10%;
   margin-right: auto;
   margin-left: auto;
   height: 100%;
@@ -133,7 +133,7 @@ export default class SplashPage extends React.Component {
             I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things <Emoji symbol=" 🤙🏾"/>
           </Subtitle>
           <Body>
-          I’m a senior at UC Berkeley, where I study Data Science and teach iOS Development. I enjoy building products that enable people to live healthier, happier lives through cutting-edge technology.
+          I’m a senior at UC Berkeley, where I study Data Science and teach iOS Development. I enjoy building products that enable people to live healthier, happier lives through technology.
           </Body>
           <Body>
           You'll soon find some of my recent projects and photos right here.
@@ -146,10 +146,7 @@ export default class SplashPage extends React.Component {
           </SocialIcons>
         </About>
         <CardContainer>
-          <CardColumn>
-            <ProjectCard/>
-            <ProjectCard/>
-          </CardColumn>
+          <Projects/>
         </CardContainer>
       </Background>
     );

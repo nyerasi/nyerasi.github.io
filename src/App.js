@@ -1,5 +1,6 @@
 import React from 'react';
 import SplashPage from './components/SplashPage.js';
+import Projects from './components/Projects.js';
 
 import styled, { css } from 'styled-components';
 

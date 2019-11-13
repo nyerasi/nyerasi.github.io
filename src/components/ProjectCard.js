@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import Image from '../components/Image.js'
 import styled, { css } from 'styled-components';
 
 // Flipping card
 const Card = styled.article`
   position: relative;
   width: 100%;
-  min-height: 25%;
+  padding-bottom: 20px;
+  min-height: 200px;
   cursor: pointer;
   perspective: 1000px;
   transition: all .25s ease-in-out;
@@ -28,16 +30,14 @@ const Card = styled.article`
 
 // Card sides
 const CardSide = css`
+  border: 2px solid white;
+  border-radius: 5px;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 20px;
   overflow: hidden;
-  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   transition: all .25s ease-in-out;
 `
@@ -72,9 +72,30 @@ const CardTitle = styled.h2`
 `
 
 const CardDescription = styled.span`
+  padding-left: 1em;
+  padding-right: 1em;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  font-size: 1em;
+`
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+`
+
+const Icon = styled.a`
+  color: black;
   font-size: 1.5em;
+  padding-right: 0.75em;
+
+  :hover {
+		color: #FF8A8A;
+		cursor: pointer;
+    transition: 0.3s ease-out;
+	}
 `
 
 export default class ProjectCard extends React.Component {
@@ -87,6 +108,12 @@ export default class ProjectCard extends React.Component {
       <Card onClick={this.flipCard.bind(this)}>
         <CardFront>
           <CardTitle>Appstraction</CardTitle>
+          <CardDescription>A progressive web application for the Berkeley Art Museum and Pacific Film Archive featuring exclusive curator commmentary.</CardDescription>
+          <SocialIcons>
+              <span><Icon href="https://www.github.com/nyerasi"><i class="fab fa-github"></i></Icon></span>
+              <span><Icon href="https://medium.com/@nikhil.yerasi"><i class="fab fa-medium-m"></i></Icon></span>
+              <span><Icon href="https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing"><i class="fas fa-link"></i></Icon></span>
+          </SocialIcons>
         </CardFront>
         <CardBack>
           <CardDescription>A progressive web application for the Berkeley Art Museum and Pacific Film Archive featuring exclusive curator commmentary.</CardDescription>
