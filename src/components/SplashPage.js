@@ -45,7 +45,7 @@ const About = styled.div`
   text-align: left;
   padding-bottom: 20px;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     width: 60%;
   }
 `;
@@ -54,7 +54,7 @@ const CardContainer = styled.span`
   width: 100%;
   text-align: center;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     width: 60%;
     margin-left: 20px;
     margin-right: 20px;
