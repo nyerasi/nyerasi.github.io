@@ -18,6 +18,7 @@ const Card = styled.article`
   &:focus,
   &:hover {
     box-shadow: 0 0 40 rgba(0,0,0,.15);
+    transform: perspective(1000px) scale(1.05);
   }
 
   &.flipped {
@@ -35,7 +36,7 @@ const Card = styled.article`
 const CardSide = css`
   width: 100%;
   /* min-height: ${props => props.minHeight != '' ? props.minHeight : '300px'}; */
-  height: ${props => props.minHeight != '' ? props.minHeight : '300px'};
+  height: ${props => props.minHeight != '' ? props.minHeight : '500px'};
   border: 2px solid white;
   border-radius: 5px;
   position: absolute;
@@ -74,15 +75,13 @@ const CardTitle = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
 `
 
 const CardHeader = styled.h3`
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.25em;
 `
 
 const CardSubtitle = styled.h4`
@@ -90,11 +89,10 @@ const CardSubtitle = styled.h4`
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.75em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
 `
 
 const CardDescription = styled.span`
+  text-align: left;
   padding-left: 1em;
   padding-right: 1em;
   font-family: 'Roboto', sans-serif;
@@ -107,6 +105,7 @@ const SocialIcons = styled.div`
   width: 100%;
   padding-left: 1em;
   padding-bottom: 1em;
+  margin: 0 auto;
 `
 
 const Icon = styled.a`
@@ -157,9 +156,9 @@ export default class ProjectCard extends React.Component {
         <CardDescription>{this.props.description}</CardDescription>
         <CardSubtitle>{this.props.subtitle}</CardSubtitle>
         <Socials
-          fontSize = '1.5em'
-          fontColor = {'black'}
-          entries={this.props.links}
+          fontSize='2.5em'
+          fontColor={'black'}
+          entries={this.props.links ? this.props.links : ""}
         />
         </CardBack>
       </Card>

@@ -4,10 +4,10 @@ import styled, { css } from 'styled-components';
 
 const SocialIcons = styled.div`
   display: flex;
-  justify-content: ${props => props.justifyContent != '' ? props.justifyContent : 'left'};
   width: 100%;
-  text-align: center;
+  text-align: ${props => props.justifyContent != '' ? props.justifyContent : 'left'};
   padding: 1em;
+  display: inline-block;
 `
 
 const Icon = styled.a`
@@ -57,9 +57,11 @@ export default class Socials extends React.Component {
     }
 
     return (
-      <SocialIcons justifyContent={this.props.jusitfyContent}>
-          {items}
-      </SocialIcons>
+      <div>
+        <SocialIcons justifyContent={this.props.jusitfyContent}>
+            {items}
+        </SocialIcons>
+      </div>
     );
   }
 }

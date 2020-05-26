@@ -53,6 +53,7 @@ const About = styled.div`
 const CardContainer = styled.span`
   width: 100%;
   text-align: center;
+  padding-top: 20px;
 
   @media ${device.tablet} {
     width: 60%;
@@ -114,20 +115,22 @@ export default class SplashPage extends React.Component {
       'github':'https://www.github.com/nyerasi',
       'linkedin':'https://www.linkedin.com/in/nyerasi',
       'medium':'https://medium.com/@nikhil.yerasi',
-      'file':'https://drive.google.com/file/d/1cyYKcEyXm50jVPl7lapX_J0Wfsa4pBo_/view?usp=sharing'
+      'file':'https://drive.google.com/file/d/1WBfob0qnMrFG7ts9-N_qg1tuCs41ZjP0/view?usp=sharing'
     };
+
+    // Emoji symbol=" 🕶"/>
 
     return (
       <Background>
       <About>
           <Title>
-            Hey there, I'm <span style={nameStyle}>Nikhil</span>.
+            Hey there, I'm <span style={nameStyle}>Nikhil</span>!
           </Title>
           <Subtitle>
-            I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things <Emoji symbol=" 🤙🏾"/>
+            I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things.
           </Subtitle>
           <Body>
-          I’m a senior at UC Berkeley, where I study Data Science and teach iOS Development. I'm currently seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
+          I’m recent graduate of UC Berkeley, where I studied Data Science and taught iOS Development. I'm currently seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
           </Body>
           <Body>
           You'll soon find some of my recent projects and photos right here.
@@ -139,7 +142,6 @@ export default class SplashPage extends React.Component {
           />
         </About>
         <CardContainer>
-          <NavigationMenu/>
           <Projects/>
         </CardContainer>
       </Background>
