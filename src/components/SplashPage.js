@@ -111,6 +111,16 @@ export default class SplashPage extends React.Component {
       fontWeight: 500
     };
 
+    const stravaStyle = {
+      color: '#EB5E2A',
+      fontWeight: 500
+    };
+
+    const iosDeCalStyle = {
+      color: '#3EA2FF',
+      fontWeight: 500
+    };
+
     const socialLinks = {
       'github':'https://www.github.com/nyerasi',
       'linkedin':'https://www.linkedin.com/in/nyerasi',
@@ -130,10 +140,13 @@ export default class SplashPage extends React.Component {
             I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things.
           </Subtitle>
           <Body>
-          I’m recent graduate of UC Berkeley, where I studied Data Science and taught iOS Development. I'm currently seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
+          I’m recent graduate of UC Berkeley, where I studied Data Science and taught mobile development. I'm currently seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
           </Body>
           <Body>
-          You'll soon find some of my recent projects and photos right here.
+          Previously, I worked as an iOS Software Engineering Intern at <a href='https://www.strava.com' style={stravaStyle}>Strava</a> and taught the <a href='https://www.iosdev.berkeley.edu' style={developStyle}>iOS DeCal</a>, UC Berkeley's official iOS Development course.
+          </Body>
+          <Body>
+
           </Body>
           <Socials
             fontSize = '2.5em'

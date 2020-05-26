@@ -27,7 +27,7 @@ const socialLinks = {
   'medium': 'fab fa-medium-m',
   'link': 'fas fa-link',
   'linkedin': 'fab fa-linkedin-in',
-  'file': 'far fa-file',
+  'file': 'fas fa-file',
   'figma':'fab fa-figma'
 };
 

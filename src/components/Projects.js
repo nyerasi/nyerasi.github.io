@@ -60,7 +60,7 @@ export default class Projects extends React.Component {
     return (
         <CardColumn>
         <ProjectCard
-          title='NeoMotion AI:'
+          title='NeoMotion AI'
           description='My senior year, I worked on a startup aiming to tackle smartphone-based stroke rehabilitation and physical therapy. I analyzed findings from user research, designed and built a protoype that performed real-time 3D pose detection, and pitched our company to accelerators and VCs across the Bay. We raised $15K during a global pandemic, validating our idea, but I left to focus on completing my education and finding a full-time job.'
           header='Quality physical therapy on your iPhone'
           subtitle='Swift, Python, React'
@@ -69,7 +69,7 @@ export default class Projects extends React.Component {
           imageHeight='300px'
         />
         <ProjectCard
-          title='Scatter:'
+          title='Scatter'
           description='I led the design and development of an MVP for a travel startup aiming to connect students in study abroad programs with local businesses across the world. Scatter brings together the best of local cuisine, sightseeing, shopping, and nightlife, curated by the friends, family, and influencers you trust.'
           header='Personalized travel recommendations'
           subtitle='Swift'
@@ -79,7 +79,7 @@ export default class Projects extends React.Component {
           imageHeight='300px'
         />
           <ProjectCard
-            title='Appstraction:'
+            title='Appstraction'
             description='I led a team of four students through the design process for the Berkeley Art Museum and Pacific Film Archive. Over three months, we interviewed 75+ museum patrons, designed five wireframes, built, and tested a fully functional progressive web application featuring exclusive curator commmentary, virtual cataloguing, and artwork scanning. We tracked analytics for 3000 users.'
             header='Accessibility in the arts'
             subtitle='React Native, Redux, Express'
@@ -89,7 +89,7 @@ export default class Projects extends React.Component {
             imageHeight='300px'
           />
           <ProjectCard
-            title='Cancer Genomics:'
+            title='Cancer Genomics'
             description='I worked with a team of graduate students to design and build a ML tool for physicians to recommend cancer treatments for patients from their cell-line mutation genomic data. I contributed to the backend, implementing and analyzing a dozen machine learning models before building out the front-end.'
             header='Data-based cancer treatment recommendations'
             subtitle='Python, React, Flask'
@@ -99,7 +99,7 @@ export default class Projects extends React.Component {
             imageHeight='300px'
           />
           <ProjectCard
-            title='Snapagram:'
+            title='Snapagram'
             description="I designed and built a simple social media application combining the best of Snapchat and Instagram as a project for students of the iOS DeCal, UC Berkeley\'s official course on iOS Development. I integrated Firebase to authenticate users as well as to store temporary Snap-style threads and permanent Instagram-style posts. Students were encouraged to tweak the design and add additional features as desired."
             header='Shameless social media clone'
             subtitle='Swift'
