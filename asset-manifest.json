@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.f282bfb6.chunk.js",
-    "main.js.map": "/static/js/main.f282bfb6.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.daaf4d4d.js",
-    "runtime~main.js.map": "/static/js/runtime~main.daaf4d4d.js.map",
-    "static/js/2.3a2cfda2.chunk.js": "/static/js/2.3a2cfda2.chunk.js",
-    "static/js/2.3a2cfda2.chunk.js.map": "/static/js/2.3a2cfda2.chunk.js.map",
+    "main.js": "/static/js/main.70b80b8f.chunk.js",
+    "main.js.map": "/static/js/main.70b80b8f.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.dd8497c4.js",
+    "runtime~main.js.map": "/static/js/runtime~main.dd8497c4.js.map",
+    "static/js/2.11d2a30f.chunk.js": "/static/js/2.11d2a30f.chunk.js",
+    "static/js/2.11d2a30f.chunk.js.map": "/static/js/2.11d2a30f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7eea1011d44e12783d338484f481e53f.js": "/precache-manifest.7eea1011d44e12783d338484f481e53f.js",
+    "precache-manifest.a8983e448c849ff26ebbdec69e02bcb9.js": "/precache-manifest.a8983e448c849ff26ebbdec69e02bcb9.js",
     "service-worker.js": "/service-worker.js",
-    "static/media/BAMPFA.png": "/static/media/BAMPFA.83210450.png",
-    "static/media/genomics.png": "/static/media/genomics.ce92aafe.png"
+    "static/media/bampfa_mockup.png": "/static/media/bampfa_mockup.4e1657d8.png",
+    "static/media/genomics_mockup.png": "/static/media/genomics_mockup.bb32d0d5.png",
+    "static/media/neomotion_mockup.png": "/static/media/neomotion_mockup.1b2d2c4e.png",
+    "static/media/scatter_mockup.png": "/static/media/scatter_mockup.1c1d6973.png",
+    "static/media/snapagram_mockup.png": "/static/media/snapagram_mockup.0a603075.png"
   }
 }
