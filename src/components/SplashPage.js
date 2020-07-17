@@ -155,13 +155,13 @@ export default class SplashPage extends React.Component {
             I <span style={designStyle}>design</span> and <span style={developStyle}>develop</span> things.
           </Subtitle>
           <Body>
-          I’m recent graduate of UC Berkeley, where I studied Data Science and taught mobile development. Previously, I worked as an iOS Software Engineering Intern at <a href='https://www.strava.com' style={stravaStyle}>Strava</a>.
+          I’m a recent graduate of UC Berkeley, where I studied Data Science and taught mobile development. Previously, I worked as an iOS Software Engineering Intern at <a href='https://www.strava.com' style={stravaStyle}>Strava</a>.
           </Body>
           <Body>
           I taught the <a href='https://www.iosdev.berkeley.edu' style={developStyle}>iOS DeCal</a>, UC Berkeley's official iOS Development course. I also led projects for <a href='https://www.bampfa.org' style={bampfaStyle}>BAMPFA</a>, <a href='https://www.terrafuse.ai' style={nameStyle}>Terrafuse</a>, and <a href='https://www.pinpointscience.com' style={pinpointStyle}>Pinpoint Science</a> through the <a href='https://www.inventioncorps.org' style={developStyle}>Invention Corps of Berkeley</a>.
           </Body>
           <Body>
-          I'm currently leading iOS Development courses for middle school students through the <a href='https://www.helloworldstudio.org/hello-world-institute' style={helloWorldStyle}>Hello World Institute</a>, seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
+          I'm currently leading iOS Development courses for middle school students through the <a href='https://www.helloworldstudio.org/hello-world-institute' style={helloWorldStyle}>Hello World Institute</a>. I'm seeking a full-time Software Engineering role to build products that enable people to live healthier and happier lives.
           </Body>
           <Socials
             fontSize = '2.5em'
