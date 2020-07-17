@@ -100,7 +100,7 @@ export default class Projects extends React.Component {
           />
           <ProjectCard
             title='Snapagram'
-            description="I designed and built a simple social media application combining the best of Snapchat and Instagram as a project for students of the iOS DeCal, UC Berkeley\'s official course on iOS Development. I integrated Firebase to authenticate users as well as to store temporary Snap-style threads and permanent Instagram-style posts. Students were encouraged to tweak the design and add additional features as desired."
+            description="I designed and built a simple social media application combining the best of Snapchat and Instagram as a project for students of the iOS DeCal, UC Berkeley's official course on iOS Development. I integrated Firebase to authenticate users as well as to store temporary Snap-style threads and permanent Instagram-style posts. Students were encouraged to tweak the design and add additional features as desired."
             header='Shameless social media clone'
             subtitle='Swift'
             image={snapagram}
