@@ -19,7 +19,7 @@
     "rodal": "^1.6.3",
     "styled-components": "^4.4.1",
     "stylus": "^0.54.7",
-    "three": "^0.109.0"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "react-scripts start",
